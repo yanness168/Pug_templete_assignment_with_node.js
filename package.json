@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^2.0.20",
+    "pug": "^3.0.2"
+  },
+  "name": "assignment1",
+  "version": "1.0.0",
+  "main": "index.js",
+  
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ep_server.js",
+    "dev": "nodemon ep_server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
