@@ -1,0 +1,13 @@
+doctype html
+head 
+body 
+    h2 Students
+    for student in studentss
+        ul(style={"font-weight":"bold"}) Name: !{JSON.stringify(student.name)}
+            li(style={"font-weight":"normal"}) Student ID: !{JSON.stringify(student.id)}; 
+            li(style={"font-weight":"normal"}) Department: !{JSON.stringify(student.department)}; 
+            li(style={"font-weight":"normal"}) Semester: !{JSON.stringify(student.semester)};  
+            li(style={"font-weight":"normal"}) Courses enrolled: !{JSON.stringify(student.courses_enrolled)}; 
+            li(style={"font-weight":"normal"}) Courses completed: !{JSON.stringify(student.courses_completed)};  
+            
+             

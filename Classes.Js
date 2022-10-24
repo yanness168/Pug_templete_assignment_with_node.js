@@ -1,5 +1,6 @@
 const express = require('express');
-const router = express.Router();
+
+
 class Course {
     constructor(id,name,department,description){
         this.id = id;
@@ -16,9 +17,9 @@ class CompletedCourse extends Course {
     }
 }
 
-class OngoingCourse extends CompletedCourse {
-    constructor(id,name,department,description,grade_achieved,remaining_seats){
-        super(id,name,department,description,grade_achieved);
+class OngoingCourse extends Course {
+    constructor(id,name,department,description,remaining_seats){
+        super(id,name,department,description);
         this.remaining_seats = remaining_seats;
     }
 }
@@ -34,22 +35,18 @@ class Student {
     }
 }
 
-var o1 = new OngoingCourse('CL123','The origin of South Korea', 'Asian study','asdfgrg',90.5,'16')
-var o2 = new OngoingCourse('CL231','The origin of Ancient China', 'Asian study','aeghtjryerg',80,'13')
-var o3 = new OngoingCourse('CL232','People,Money, and Market', 'Economics','aeghtjryerg',92,'2')
-var o4 = new OngoingCourse('CL271','Java Programming', 'Computer Science','aeghtjryerg',90,'3')
-var o5 = new OngoingCourse('CR434','Physics II', 'Science','erhtrgrg',67,'7')
+const o1 = new OngoingCourse('CL123','The origin of South Korea', 'Asian study','The history of South Korea formally begins with the Japanese surrender on 2 September 1945.','16')
+const o2 = new OngoingCourse('CL231','The origin of Ancient China', 'Asian study','Neolithic civilizations originated at various cultural centers along both the Yellow River and Yangtze River. ','13')
+const o3 = new OngoingCourse('CL232','People,Money, and Market', 'Economics','Economics is the study of scarcity and its implications for the use of resources, production of goods and services, growth of production and welfare over time.','2')
+const o4 = new OngoingCourse('CL271','Java Programming', 'Computer Science','Java is a widely used object-oriented programming language and software platform that runs on billions of devices, including notebook computers, mobile devices, gaming consoles, medical devices and many others.','3')
+const o5 = new OngoingCourse('CR434','Physics II', 'Science','Classical optics, special relativity, theory of quantum mechanics (QM) using calculus and simple differential equations. Applications of QM to atomic and solid state physics will also be included.','7')
 
-var s1 = new Student('347214321','Eric Chou','Social Science',4,['CPAN271','CL231'],['CPAN111','CPAN123'])
-var s2 = new Student('312438201','Jay Chou','Applied Science',1,['CL271','CPAN211','CL232','CR434'],['CPAN211'])
-var s3 = new Student('442343213','Kwan Chou','Applied Science',4,['CL271','CPAN211','CL232','CR434'],['CPAN211','CPAN321','CPAN321',])
-var s4 = new Student('353145464','JJ Chou','Applied Science',3,['CL232'],['CPAN432','CPAN211','CPAN212'])
-var s5 = new Student('324653721','Ethan Chaw','Applied Science',4,['CL271','CPAN231','CL232','CR434'],['CPAN211','CPAN321',])
+const s1 = new Student('347214321','Eric Chou','Social Science','4th',['CPAN271','CL231'],{'CPAN111': 89,'CPAN123': 90})
+const s2 = new Student('312438201','Jay Chou','Applied Science','1st',['CL271','CPAN211','CL232','CR434'],{'CPAN211':87})
+const s3 = new Student('442343213','Kwan Chou','Applied Science','4th',['CL271','CPAN211','CL232','CR434'],{'CPAN211':88,'CPAN321':90,'CPAN321':95})
+const s4 = new Student('353145464','JJ Chou','Applied Science','3rd',['CL232'],{'CPAN432':89,'CPAN211':76,'CPAN212':88})
+const s5 = new Student('324653721','Ethan Chaw','Applied Science','4th',['CL271','CPAN231','CL232','CR434'],{'CPAN211':98,'CPAN321':99})
 
-
-router.route('/student')
-    .get((req,res)=>{
-        res.send(s2);
-    })
-
-module.exports = router;
+ongoingc = [o1,o2,o3,o4,o5];
+students = [s1,s2,s3,s4,s5];
+module.exports = {ongoingc, students};

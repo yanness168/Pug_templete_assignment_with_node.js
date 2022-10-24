@@ -1,0 +1,24 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+    body 
+        h2 Student #{id}
+        //- --const index = students.findIndex(item=>item.id==id);
+        - if (JSON.stringify(student) !== '[]')
+            ul(style={"font-weight":"bold"}) Name: !{JSON.stringify(student[0].name)}
+                li(style={"font-weight":"normal"}) Student ID: !{JSON.stringify(student[0].id)}
+                li(style={"font-weight":"normal"}) Department: !{JSON.stringify(student[0].department)}
+                li(style={"font-weight":"normal"}) Semester: !{JSON.stringify(student[0].semester)}  
+                li(style={"font-weight":"normal"}) Courses enrolled: !{JSON.stringify(student[0].courses_enrolled)}
+                li(style={"font-weight":"normal"}) Courses completed: !{JSON.stringify(student[0].courses_completed)}
+            - const grades = Object.values(student[0].courses_completed);
+            //* reducer method that takes in the accumulator and next item *//
+            //* const reducer = (accumulator, item) => (accumulator + item, 0) *//
+            - const average = ((grades.reduce((a,b)=> a+b, 0))/(grades.length)).toFixed(2); //use ".tpFixed()" to specify decimal point
+            p Your average GPA is: #{average}.
+        - else 
+            p The sutent ID is not in record.
