@@ -18,7 +18,7 @@ html(lang="en")
             - const grades = Object.values(student[0].courses_completed);
             //* reducer method that takes in the accumulator and next item *//
             //* const reducer = (accumulator, item) => (accumulator + item, 0) *//
-            - const average = ((grades.reduce((a,b)=> a+b, 0))/(grades.length)).toFixed(2); //use ".tpFixed()" to specify decimal point
+            - const average = ((grades.reduce((a,b)=> a+b, 0))/(grades.length)).toFixed(2); //use ".toFixed()" to specify decimal point
             p Your average GPA is: #{average}.
         - else 
             p The sutent ID is not in record.

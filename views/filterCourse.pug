@@ -1,0 +1,36 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+    body 
+        div.text-center
+        form(method="POST" action="/fcourse/filter_course")
+            h1(class=h1Classes) Please Fill out the fields to filter ongoing courses
+
+            //-input course id
+            label Course ID: 
+            input(type="text" name="id" autofocus)
+            br
+            br
+            //-input course name
+            label Name: 
+            input(type="text" name="name" autofocus)
+            br
+            br
+            //-input course department
+            label Department: 
+            input(type="text" name="de" autofocus)
+            br
+            br
+            //-inout course availablity
+            lable Course Availability: 
+            select(name="availability")
+                option Full
+                option Not Full 
+            br
+            br
+            //-Submit button
+            input(type="submit" value="submit")

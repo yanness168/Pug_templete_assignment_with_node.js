@@ -16,5 +16,4 @@ router.get('/student/:studentId', function (req, res) {
     res.render('getIdAndAverage',{id: id, student:student});
 });
 
-
 module.exports = router;

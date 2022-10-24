@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  </head>
+  <body> 
+    <div class="text-center"></div>
+    <form method="POST" action="/fcourse/filter_course">
+      <h1>Please Fill out the fields to filter ongoing courses</h1>
+      <label>Course ID: </label>
+      <input type="text" name="id" autofocus><br><br>
+      <label>Name: </label>
+      <input type="text" name="name" autofocus><br><br>
+      <label>Department: </label>
+      <input type="text" name="de" autofocus><br><br>
+      <lable>Course Availability: </lable>
+      <select name="availability">
+        <option>Full</option>
+        <option>Not Full </option>
+      </select><br><br>
+      <input type="submit" value="submit">
+    </form>
+  </body>
+</html>
