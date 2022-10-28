@@ -27,9 +27,9 @@ html(lang="en")
             br
             //-inout course availablity
             lable Course Availability: 
-            select(name="availability")
-                option Full
-                option Not Full 
+                select(name="availability")
+                   each s in status
+                        option(value=s.id) #{s}
             br
             br
             //-Submit button

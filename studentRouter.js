@@ -25,11 +25,24 @@ studentRouter.post('/filter_student', function (req, res){
         courses_completed: completedcourses
     }
     var matches = [];
-    matches = students.filter(s=>{
-        return Object.entries(input).every(([i,value])=>{
-            return input[i] === value;
-        });
-    });
+    //matches = students.filter(s=>s.id === id || s.name === name || s.department === department);
+    if(id!==''){
+        matches=students.filter(s=>(s.id === input.id))
+    }
+    else if (name!==""){
+        matches=students.filter(s=>(s.name === input.name))
+    }
+    else if (department!==""){
+        matches=students.filter(s=>(s.department === input.department))
+    }
+    else if (input.courses_enrolled!==""){
+        matches=students.filter(s=>(s.courses_enrolled === input.courses_enrolled))
+    }
+    else if (courses_completed!==""){
+        matches=students.filter(s=>(s.courses_completed === input.courses_completed))
+    }
+    else(matches==null)
+
     res.send(matches)
 
 })

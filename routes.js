@@ -2,6 +2,10 @@ const express = require('express');
 const router = express.Router();
 const {ongoingc,students} = require('./classes.js');
 
+router.get('/',function(req,res){
+    res.render('home');
+})
+
 router.get('/student', function(req, res) {
     res.render('getStudent',{studentss: students});
 });

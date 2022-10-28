@@ -35,11 +35,11 @@ class Student {
     }
 }
 
-const o1 = new OngoingCourse('CL123','The origin of South Korea', 'Asian study','The history of South Korea formally begins with the Japanese surrender on 2 September 1945.','0')
-const o2 = new OngoingCourse('CL231','The origin of Ancient China', 'Asian study','Neolithic civilizations originated at various cultural centers along both the Yellow River and Yangtze River. ','0')
-const o3 = new OngoingCourse('CL232','People,Money, and Market', 'Economics','Economics is the study of scarcity and its implications for the use of resources, production of goods and services, growth of production and welfare over time.','2')
-const o4 = new OngoingCourse('CL271','Java Programming', 'Computer Science','Java is a widely used object-oriented programming language and software platform that runs on billions of devices, including notebook computers, mobile devices, gaming consoles, medical devices and many others.','3')
-const o5 = new OngoingCourse('CR434','Physics II', 'Science','Classical optics, special relativity, theory of quantum mechanics (QM) using calculus and simple differential equations. Applications of QM to atomic and solid state physics will also be included.','7')
+const o1 = new OngoingCourse('CL123','The origin of South Korea', 'Asian Study','The history of South Korea formally begins with the Japanese surrender on 2 September 1945.',0)
+const o2 = new OngoingCourse('CL231','The origin of Ancient China', 'Asian Study','Neolithic civilizations originated at various cultural centers along both the Yellow River and Yangtze River. ',0)
+const o3 = new OngoingCourse('CL232','People,Money, and Market', 'Economics','Economics is the study of scarcity and its implications for the use of resources, production of goods and services, growth of production and welfare over time.',2)
+const o4 = new OngoingCourse('CL271','Java Programming', 'Computer Science','Java is a widely used object-oriented programming language and software platform that runs on billions of devices, including notebook computers, mobile devices, gaming consoles, medical devices and many others.',3)
+const o5 = new OngoingCourse('CR434','Physics II', 'Science','Classical optics, special relativity, theory of quantum mechanics (QM) using calculus and simple differential equations. Applications of QM to atomic and solid state physics will also be included.',7)
 
 const s1 = new Student('347214321','Eric Chou','Social Science','4th',['CPAN271','CL231'],{'CPAN111': 89,'CPAN123': 90})
 const s2 = new Student('312438201','Jay Chou','Applied Science','1st',['CL271','CPAN211','CL232','CR434'],{'CPAN211':87})
